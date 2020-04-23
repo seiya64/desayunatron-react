@@ -7,7 +7,7 @@ import Home from '../components/Home'
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
-      <Route path="/:filter?" component={Home} />
+      <Route path='/:filter?' component={Home} />
     </Router>
   </Provider>
 )

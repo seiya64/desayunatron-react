@@ -1,14 +1,15 @@
 import React from 'react'
+import Container from 'react-bootstrap/Container';
 import BreakfastList from '../containers/BreakfastList'
 import BreakfastForm from '../containers/AddBreakfast'
 
 const Breakfasts = () => {
   
   return (
-    <div className="container-fluid">
+    <Container fluid>
       <BreakfastForm></BreakfastForm>
       <BreakfastList></BreakfastList>
-    </div>
+    </Container>
   )
 }
 

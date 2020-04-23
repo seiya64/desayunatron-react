@@ -1,12 +1,14 @@
 import React from 'react'
+import Jumbotron from 'react-bootstrap/Jumbotron';
 import Breakfasts from './Breakfasts'
+
 const Home = () => {
   return (
     <div>
-      <div className="jumbotron">
+      <Jumbotron>
         <h1>Desyunatrón!</h1>
         <p>Para desayunar un montón!</p>
-      </div>
+      </Jumbotron>
       <Breakfasts></Breakfasts>
     </div>
   )
