@@ -1,23 +1,24 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
 
 const BreakfastForm = (props) => {
   const { editingBreakfast, onSaveBreakfast, onChangeValue } = props
   const { drink, food } = editingBreakfast
 
   return (
-    <div className="container-fluid  mb-4">
-      <form>
-        <div className='form-group'>
-          <label htmlFor='drink'>Bebida</label>
-          <input type='text' name='drink' value={drink} className='form-control' id='drink' onChange={onChangeValue} />
-        </div>
-        <div className='form-group'>
-          <label htmlFor='food'>Comida</label>
-          <input type='text' name='food' value={food} className='form-control' id='food' onChange={onChangeValue} />
-        </div>
-        <button type='button' className='btn btn-primary' onClick={onSaveBreakfast}>Ya ehtaría!</button>
-      </form>
-    </div>
+    <Container fluid className='mb-4'>
+      <Form>
+        <Form.Group>
+          <Form.Control placeholder='Bebida' name='drink' value={drink} id='drink' onChange={onChangeValue} />
+        </Form.Group>
+        <Form.Group>
+          <Form.Control placeholder='Comida' name='food' value={food} id='food' onChange={onChangeValue} />
+        </Form.Group>
+        <Button variant='primary' onClick={onSaveBreakfast}>Ya ehtaría!</Button>
+      </Form>
+    </Container>
   )
 }
 
